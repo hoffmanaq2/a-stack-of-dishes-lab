@@ -1,15 +1,17 @@
 #include <string>
+using namespace std;
 
 class Dish {
-  private:
-    std::string description;
+private:
+  string description;
 
-  public:
-    Dish(std::string description) {
-      this->description = description;
-    }
+public:
+  Dish() : description("") {} // default constructor
+  Dish(string description) {
+    this->description = description;
+  }
 
-    std::string get_description() {
-      return this->description;
-    }
-}
+  string get_description() const {
+    return this->description;
+  }
+};
